@@ -97,13 +97,7 @@ class Main extends React.Component {
             <img src={pic03} alt="" />
           </span>
           <p>
-            Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent
-            eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam
-            erat volutpat. Praesent urna nisi, fringila lorem et vehicula
-            lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.
-            Aliquam libero et malesuada fames ac ante ipsum primis in faucibus.
-            Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit
-            amet.
+           
           </p>
           {close}
         </article>
@@ -115,7 +109,7 @@ class Main extends React.Component {
           }`}
           style={{ display: 'none' }}
         >
-          <h2 className="major">Contact</h2>
+          <h2 className="major">Let's be internet BFFs</h2>
           <form method="post" action="#">
             <div className="field half first">
               <label htmlFor="name">Name</label>
@@ -139,12 +133,9 @@ class Main extends React.Component {
             </ul>
           </form>
           <ul className="icons">
-            <li>
-              <a
-                href="https://twitter.com/HuntaroSan"
-                className="icon fa-twitter"
-              >
-                <span className="label">Twitter</span>
+          <li>
+              <a href="https://www.linkedin.com/in/cristian-claudiu-sandu-021aaa101/" className="icon fa-linkedin">
+                <span className="label">LinkedIn</span>
               </a>
             </li>
             <li>
