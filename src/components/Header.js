@@ -12,7 +12,6 @@ const Header = props => (
         <h1>Cristian Claudiu Sandu</h1>
         <p>
           Enthusiastic software developer with a proven track record of supporting a leading SAP business in the development and maintenance of old and new SaaS products. 
-
         </p>
       </div>
     </div>
