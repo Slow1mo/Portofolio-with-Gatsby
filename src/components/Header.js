@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import profilepic from '../images/profilepic.jpg'
+import CV from '../cv/CristianCS_CV.pdf'
 
 const Header = props => (
   <header id="header" style={props.timeout ? { display: 'none' } : {}}>
@@ -10,8 +11,11 @@ const Header = props => (
     <div className="content">
       <div className="inner">
         <h1>Cristian Claudiu Sandu</h1>
+        
         <p>
-          Enthusiastic software developer with a proven track record of supporting a leading SAP business in the development and maintenance of old and new SaaS products. 
+          Enthusiastic software developer with a proven track record of supporting a leading SAP business in the development and maintenance of old and new SaaS products.
+          <br/>
+          <a href={CV} download>You can download my CV right here.</a>
         </p>
       </div>
     </div>
