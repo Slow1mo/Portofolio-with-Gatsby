@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-dimension-v2",
-  "description": "Gatsby Starter - Dimension V2",
+  "name": "cristian-homepage",
+  "description": "Cristian Sandu | Software Developer",
   "version": "1.0.0",
-  "author": "Hunter Chang",
+  "author": "Cristian Sandu",
   "dependencies": {
     "gatsby": "^2.19.5",
     "gatsby-plugin-manifest": "^2.2.38",
