@@ -47,7 +47,7 @@ class Main extends React.Component {
           </p>
           <p>
           I’m born and raised in Romania, but moved to Denmark in 2005. My passion towards everything computer-related started in 1999, while playing games like Mortal
-Kombat 3, Half-Life and Duke Nukem. I love lifting heavy things, stand-up comedy, music festivals and chocolate.  I love lifting heavy things, stand-up comedy, music festivals and chocolate.
+Kombat 3, Half-Life and Duke Nukem. I love lifting heavy things, stand-up comedy, music festivals and chocolate.  
           </p>
           {close}
         </article>

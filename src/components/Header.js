@@ -7,6 +7,8 @@ const Header = props => (
   <header id="header" style={props.timeout ? { display: 'none' } : {}}>
    <div className="logo">
       <span className="icon fa-diamond"></span>
+
+      
     </div>
     <div className="content">
       <div className="inner">
@@ -15,7 +17,7 @@ const Header = props => (
         <p>
           Enthusiastic software developer with a proven track record of supporting a leading SAP business in the development and maintenance of old and new SaaS products.
           <br/>
-          <a href={CV} download>You can download my CV right here.</a>
+          <a href={CV} download>Click here to download my CV.</a>
         </p>
       </div>
     </div>
