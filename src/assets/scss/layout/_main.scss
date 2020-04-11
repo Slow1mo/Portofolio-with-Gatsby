@@ -90,6 +90,9 @@
 				display: grid;
 				grid-template-columns: repeat(2,minmax(200px,1fr));
 				overflow: hidden;
+				grid-column-gap: 0px;
+				grid-row-gap: 0px;
+				color: var(--clr-light);
 			}
 
 			.portfolio__item {
@@ -100,16 +103,21 @@
 
 			.portfolio__img {
 				transition: transform 750ms cubic-bezier(.5, 0, .5, 1),
-				opacity transform 350ms linear;
+				opacity transform 250ms linear;
 				object-fit: cover;
 				width: 100%;
 				max-height: 100%;
 			}
 
+			.portfolio__item:focus {
+				position: relative;
+				z-index: 2;
+			}
+
 			.portfolio__img:hover,
 			.portfolio__item:focus .portfolio__img {
 				transform: scale(1.2);
-				opacity: .5;
+				opacity: .5;		
 			}
 
 			
