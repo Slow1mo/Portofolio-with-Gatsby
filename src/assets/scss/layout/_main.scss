@@ -1,146 +1,144 @@
-///
-/// Dimension by HTML5 UP
-/// html5up.net | @ajlkn
-/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-///
-
 /* Main */
 
-	#main {
-		@include vendor('flex-grow', '1');
-		@include vendor('flex-shrink', '1');
-		@include vendor('display', 'flex');
-		@include vendor('align-items', 'center');
-		@include vendor('justify-content', 'center');
-		@include vendor('flex-direction', 'column');
-		position: relative;
-		max-width: 100%;
-		z-index: 3;
-		display: none;
+#main {
+  @include vendor('flex-grow', '1');
+  @include vendor('flex-shrink', '1');
+  @include vendor('display', 'flex');
+  @include vendor('align-items', 'center');
+  @include vendor('justify-content', 'center');
+  @include vendor('flex-direction', 'column');
+  position: relative;
+  max-width: 100%;
+  z-index: 3;
+  display: none;
 
-		article {
-			@include vendor('transform', 'translateY(0.25rem)');
-			@include vendor('transition', (
-				'opacity #{_duration(article)} ease-in-out',
-				'transform #{_duration(article)} ease-in-out'
-			));
-			@include padding(2.5rem, 2.5rem, (2rem, 0, 1rem, 0));
-			position: relative;
-			width: 50rem;
-			max-width: 100%;
-			background-color: transparentize(_palette(bg), 0.15);
-			border-radius: _size(border-radius);
-			opacity: 0;
+  article {
+    @include vendor('transform', 'translateY(0.25rem)');
+    @include vendor(
+      'transition',
+      (
+        'opacity #{_duration(article)} ease-in-out',
+        'transform #{_duration(article)} ease-in-out'
+      )
+    );
+    @include padding(2.5rem, 2.5rem, (2rem, 0, 1rem, 0));
+    position: relative;
+    width: 50rem;
+    max-width: 100%;
+    background-color: transparentize(_palette(bg), 0.15);
+    border-radius: _size(border-radius);
+    opacity: 0;
 
-			&.timeout {
-				display: none;
-			}
+    &.timeout {
+      display: none;
+    }
 
-			&.active.timeout {
-				@include vendor('transform', 'translateY(0)');
-				opacity: 1;
-			}
+    &.active.timeout {
+      @include vendor('transform', 'translateY(0)');
+      opacity: 1;
+    }
 
-			&.active {
-				display: block !important;
-			}
+    &.active {
+      display: block !important;
+    }
 
-			.close {
-				display: block;
-				position: absolute;
-				top: 0;
-				right: 0;
-				width: 4rem;
-				height: 4rem;
-				cursor: pointer;
-				text-indent: 4rem;
-				overflow: hidden;
-				white-space: nowrap;
+    .close {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 4rem;
+      height: 4rem;
+      cursor: pointer;
+      text-indent: 4rem;
+      overflow: hidden;
+      white-space: nowrap;
 
-				&:before {
-					@include vendor('transition', 'background-color #{_duration(transition)} ease-in-out');
-					content: '';
-					display: block;
-					position: absolute;
-					top: 0.75rem;
-					left: 0.75rem;
-					width: 2.5rem;
-					height: 2.5rem;
-					border-radius: 100%;
-					background-position: center;
-					background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 20 20" zoomAndPan="disable"><style>line { stroke: #{_palette(border)}; stroke-width: 1; }</style><line x1="2" y1="2" x2="18" y2="18" /><line x1="18" y1="2" x2="2" y2="18" /></svg>');
-					background-size: 20px 20px;
-					background-repeat: no-repeat;
-				}
+      &:before {
+        @include vendor(
+          'transition',
+          'background-color #{_duration(transition)} ease-in-out'
+        );
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0.75rem;
+        left: 0.75rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 100%;
+        background-position: center;
+        background-image: svg-url(
+          '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 20 20" zoomAndPan="disable"><style>line { stroke: #{_palette(border)}; stroke-width: 1; }</style><line x1="2" y1="2" x2="18" y2="18" /><line x1="18" y1="2" x2="2" y2="18" /></svg>'
+        );
+        background-size: 20px 20px;
+        background-repeat: no-repeat;
+      }
 
-				&:hover {
-					&:before {
-						background-color: _palette(border-bg);
-					}
-				}
+      &:hover {
+        &:before {
+          background-color: _palette(border-bg);
+        }
+      }
 
-				&:active {
-					&:before {
-						background-color: _palette(border-bg-alt);
-					}
-				}
-			}
+      &:active {
+        &:before {
+          background-color: _palette(border-bg-alt);
+        }
+      }
+    }
 
-			.portfolio {
-				display: grid;
-				grid-template-columns: repeat(2,minmax(200px,1fr));
-				overflow: hidden;
-				grid-column-gap: 0px;
-				grid-row-gap: 0px;
-				color: var(--clr-light);
-			}
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(200px, 1fr));
+      grid-column-gap: 5px;
+      grid-row-gap: 5px;
+      color: var(--clr-light);
+    }
 
-			.portfolio__item {
-				background: var(--clr-accent);
-				position: relative;
-				overflow: hidden;
-			}
+    .portfolio__item {
+      background: var(--clr-accent);
+      position: relative;
+      overflow: hidden;
+      border-bottom-style: none;
+    }
 
-			.portfolio__img {
-				transition: transform 750ms cubic-bezier(.5, 0, .5, 1),
-				opacity transform 250ms linear;
-				object-fit: cover;
-				width: 100%;
-				max-height: 100%;
-			}
+    .portfolio__img {
+      transition: transform 750ms cubic-bezier(0.5, 0.5, 0.5, 0.5),
+        opacity transform 250ms linear;
+      object-fit: fill;
+      width: 100%;
+      height: 100%;
+    }
 
-			.portfolio__item:focus {
-				position: relative;
-				z-index: 2;
-			}
+    .portfolio__item:focus {
+      position: relative;
+    }
 
-			.portfolio__img:hover,
-			.portfolio__item:focus .portfolio__img {
-				transform: scale(1.2);
-				opacity: .5;		
-			}
+    .portfolio__img:hover,
+    .portfolio__item:focus .portfolio__img {
+      transform: scale(1.2);
+    }
+  }
 
-			
-		}
+  @include breakpoint(small) {
+    article {
+      @include padding(2rem, 2rem, (1.5rem, 0, 0.5rem, 0));
+      .close {
+        &:before {
+          top: 0.875rem;
+          left: 0.875rem;
+          width: 2.25rem;
+          height: 2.25rem;
+          background-size: 14px 14px;
+        }
+      }
+    }
+  }
 
-		@include breakpoint(small) {
-			article {
-				@include padding(2rem, 2rem, (1.5rem, 0, 0.5rem, 0));
-				.close {
-					&:before {
-						top: 0.875rem;
-						left: 0.875rem;
-						width: 2.25rem;
-						height: 2.25rem;
-						background-size: 14px 14px;
-					}
-				}
-			}
-		}
-
-		@include breakpoint(xsmall) {
-			article {
-				@include padding(2rem, 1.5rem, (1rem, 0, 0.5rem, 0));
-			}
-		}
-	}
+  @include breakpoint(xsmall) {
+    article {
+      @include padding(2rem, 1.5rem, (1rem, 0, 0.5rem, 0));
+    }
+  }
+}
