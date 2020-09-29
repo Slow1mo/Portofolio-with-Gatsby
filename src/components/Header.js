@@ -5,19 +5,21 @@ import CV from '../cv/CristianCS_CV.pdf'
 
 const Header = props => (
   <header id="header" style={props.timeout ? { display: 'none' } : {}}>
-   <div className="logo">
+    <div className="logo">
       <span className="icon fa-diamond"></span>
-
-      
     </div>
     <div className="content">
       <div className="inner">
         <h1>Cristian Claudiu Sandu</h1>
-        
+
         <p>
-          Enthusiastic software developer with a proven track record of supporting a leading SAP business in the development and maintenance of old and new SaaS products.
-          <br/>
-          <a href={CV} download>Click here to download my CV.</a>
+          Enthusiastic software developer with a proven track record of
+          supporting a leading SAP business in the development and maintenance
+          of old and new SaaS products.
+          <br />
+          <a href={CV} download>
+            Click here to download my CV.
+          </a>
         </p>
       </div>
     </div>
@@ -38,7 +40,7 @@ const Header = props => (
               props.onOpenArticle('work')
             }}
           >
-            Work
+            My Work
           </button>
         </li>
         <li>
