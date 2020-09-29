@@ -11,7 +11,7 @@ import markdown from '../images/markdown.jpg'
 import calc from '../images/Calc.jpg'
 import AES from '../images/AES.jpg'
 import htmlform from '../images/htmlform.png'
-import { Container, Row, Image, Card, Button } from 'react-bootstrap'
+
 class Main extends React.Component {
   render() {
     let close = (

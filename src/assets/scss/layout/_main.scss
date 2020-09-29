@@ -90,7 +90,7 @@
 
     .portfolio {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       grid-column-gap: 5px;
       grid-row-gap: 5px;
       color: var(--clr-light);
@@ -124,7 +124,7 @@
       width: 100%;
       height: 100%;
       float: left;
-      overflow: hidden;
+      overflow: auto;
       position: relative;
       text-align: center;
       cursor: default;
@@ -180,7 +180,8 @@
       justify-content: space-around;
       text-transform: uppercase;
       text-decoration: none;
-      padding: 5px 5px;
+      overflow: auto;
+      padding: 2px 2px;
       color: #fff;
       border: 1px solid #fff;
       background-color: transparent;
@@ -224,6 +225,38 @@
 
       &:active {
         background-color: _palette(border-bg-alt);
+      }
+    }
+
+    @media (min-width: 1080px) {
+      .overlay {
+        font-size: 14px !important;
+      }
+
+      .button {
+        display: inline-block;
+        min-width: 6.5rem;
+        height: 2.3rem;
+        line-height: 2.3rem;
+        padding: 0 1.25rem 0 (1.25rem + _font(letter-spacing));
+        text-transform: uppercase;
+        letter-spacing: _font(letter-spacing);
+        font-size: 14px;
+      }
+
+      .hovereffect h2 {
+        text-transform: uppercase;
+        color: #fff;
+        text-align: center;
+        position: relative;
+        font-size: 15px;
+        padding: 9px;
+        background: rgba(0, 0, 0, 0.6);
+        -webkit-transform: translateY(45px);
+        -ms-transform: translateY(45px);
+        transform: translateY(45px);
+        -webkit-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
       }
     }
   }
